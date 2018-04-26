@@ -15,11 +15,12 @@ def saveProduct(request):
     pdate=request.POST['pdate']
     p=Product(pid,pname,pdate)
     p.save()
+    
     return render(request,'index.html')
 
 def displayProducts(request):
     records=Product.objects.all()
-    
+
     return render(request,'display.html',{'recs':records})
 
 
