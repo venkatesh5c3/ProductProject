@@ -19,6 +19,7 @@ def saveProduct(request):
 
 def displayProducts(request):
     records=Product.objects.all()
+    
     return render(request,'display.html',{'recs':records})
 
 
